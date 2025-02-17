@@ -54,6 +54,85 @@ app.get("/api/pokemons", (req, res) => {
   });
 });
 
+
+app.get("/api/pokemons/:id", (req, res) => {
+  const id = parseInt(req.params.id); // Convertir l'ID en nombre
+  const pokemon = pokemonsList.find(p => p.id === id); // Recherche par ID
+
+  if (!pokemon) {
+    return res.status(404).send({ error: "Pokémon non trouvé" });
+  }
+
+  res.status(200).send(pokemon);
+});
+
+app.post("/api/pokemons", (req, res) => {
+  const { name, type, base, image } = req.body;
+
+  // Vérification des données
+  if (!name || !type || !base || !image) {
+      return res.status(400).json({ message: "Tous les champs sont requis" });
+  }
+
+  // Générer un nouvel ID basé sur le plus grand ID existant
+  const newId = pokemonsList.length > 0 ? Math.max(...pokemonsList.map(p => p.id)) + 1 : 1;
+
+  // Créer le nouveau Pokémon
+  const newPokemon = {
+      id: newId,
+      name,
+      type,
+      base,
+      image
+  };
+
+  // Ajouter à la liste
+  pokemonsList.push(newPokemon);
+
+  res.status(201).json({ message: "Pokémon ajouté avec succès", pokemon: newPokemon });
+});
+
+app.put("/api/pokemons/:id", (req, res) => {
+  const { id } = req.params;
+  const { name, type, base, image } = req.body;
+
+  // Convertir id en nombre
+  const pokemonId = parseInt(id);
+
+  // Chercher le Pokémon par ID
+  const pokemonIndex = pokemonsList.findIndex(p => p.id === pokemonId);
+
+  if (pokemonIndex === -1) {
+      return res.status(404).json({ message: "Pokémon non trouvé" });
+  }
+
+  // Mise à jour des champs fournis
+  if (name) pokemonsList[pokemonIndex].name = name;
+  if (type) pokemonsList[pokemonIndex].type = type;
+  if (base) pokemonsList[pokemonIndex].base = base;
+  if (image) pokemonsList[pokemonIndex].image = image;
+
+  res.status(200).json({
+      message: "Pokémon mis à jour avec succès",
+      pokemon: pokemonsList[pokemonIndex]
+  });
+});
+
+
+app.delete("/api/pokemons/:id", (req, res) => {
+  const id = parseInt(req.params.id); // Convertit l'ID en nombre
+  const index = pokemonsList.findIndex(p => p.id === id);
+
+  if (index === -1) {
+    return res.status(404).send({ error: "Pokémon non trouvé" });
+  }
+
+  const deletedPokemon = pokemonsList.splice(index, 1)[0];
+  //fs.writeFileSync("./pokemons.json", JSON.stringify(pokemonsList, null, 2));
+
+  res.status(200).send(deletedPokemon);
+});
+
 app.get("/", (req, res) => {
   res.send("bienvenue sur l'API Pokémon");
 });
