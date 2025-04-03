@@ -1,5 +1,163 @@
 [
   {
+    "id": 1,
+    "name": {
+      "english": "Bulbasaur",
+      "japanese": "フシギダネ",
+      "chinese": "妙蛙种子",
+      "french": "Bulbizarre"
+    },
+    "type": [
+      "Grass",
+      "Poison"
+    ],
+    "base": {
+      "HP": 45,
+      "Attack": 49,
+      "Defense": 49,
+      "Sp. Attack": 65,
+      "Sp. Defense": 65,
+      "Speed": 45
+    },
+    "image": "http://localhost:3000/assets/pokemons/1.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/1.png"
+  },
+  {
+    "id": 2,
+    "name": {
+      "english": "Ivysaur",
+      "japanese": "フシギソウ",
+      "chinese": "妙蛙草",
+      "french": "Herbizarre"
+    },
+    "type": [
+      "Grass",
+      "Poison"
+    ],
+    "base": {
+      "HP": 60,
+      "Attack": 62,
+      "Defense": 63,
+      "Sp. Attack": 80,
+      "Sp. Defense": 80,
+      "Speed": 60
+    },
+    "image": "http://localhost:3000/assets/pokemons/2.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/2.png"
+  },
+  {
+    "id": 3,
+    "name": {
+      "english": "Venusaur",
+      "japanese": "フシギバナ",
+      "chinese": "妙蛙花",
+      "french": "Florizarre"
+    },
+    "type": [
+      "Grass",
+      "Poison"
+    ],
+    "base": {
+      "HP": 80,
+      "Attack": 82,
+      "Defense": 83,
+      "Sp. Attack": 100,
+      "Sp. Defense": 100,
+      "Speed": 80
+    },
+    "image": "http://localhost:3000/assets/pokemons/3.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/3.png"
+  },
+  {
+    "id": 4,
+    "name": {
+      "english": "Charmander",
+      "japanese": "ヒトカゲ",
+      "chinese": "小火龙",
+      "french": "Salamèche"
+    },
+    "type": [
+      "Fire"
+    ],
+    "base": {
+      "HP": 39,
+      "Attack": 52,
+      "Defense": 43,
+      "Sp. Attack": 60,
+      "Sp. Defense": 50,
+      "Speed": 65
+    },
+    "image": "http://localhost:3000/assets/pokemons/4.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/4.png"
+  },
+  {
+    "id": 5,
+    "name": {
+      "english": "Charmeleon",
+      "japanese": "リザード",
+      "chinese": "火恐龙",
+      "french": "Reptincel"
+    },
+    "type": [
+      "Fire"
+    ],
+    "base": {
+      "HP": 58,
+      "Attack": 64,
+      "Defense": 58,
+      "Sp. Attack": 80,
+      "Sp. Defense": 65,
+      "Speed": 80
+    },
+    "image": "http://localhost:3000/assets/pokemons/5.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/5.png"
+  },
+  {
+    "id": 6,
+    "name": {
+      "english": "Charizard",
+      "japanese": "リザードン",
+      "chinese": "喷火龙",
+      "french": "Dracaufeu"
+    },
+    "type": [
+      "Fire",
+      "Flying"
+    ],
+    "base": {
+      "HP": 78,
+      "Attack": 84,
+      "Defense": 78,
+      "Sp. Attack": 109,
+      "Sp. Defense": 85,
+      "Speed": 100
+    },
+    "image": "http://localhost:3000/assets/pokemons/6.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/6.png"
+  },
+  {
+    "id": 7,
+    "name": {
+      "english": "Squirtle",
+      "japanese": "ゼニガメ",
+      "chinese": "杰尼龟",
+      "french": "Carapuce"
+    },
+    "type": [
+      "Water"
+    ],
+    "base": {
+      "HP": 44,
+      "Attack": 48,
+      "Defense": 65,
+      "Sp. Attack": 50,
+      "Sp. Defense": 64,
+      "Speed": 43
+    },
+    "image": "http://localhost:3000/assets/pokemons/7.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/7.png"
+  },
+  {
     "id": 8,
     "name": {
       "english": "Wartortle",
@@ -18,7 +176,8 @@
       "Sp. Defense": 80,
       "Speed": 58
     },
-    "image": "http://localhost:3000/assets/pokemons/8.png"
+    "image": "http://localhost:3000/assets/pokemons/8.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/8.png"
   },
   {
     "id": 9,
@@ -39,7 +198,8 @@
       "Sp. Defense": 105,
       "Speed": 78
     },
-    "image": "http://localhost:3000/assets/pokemons/9.png"
+    "image": "http://localhost:3000/assets/pokemons/9.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/9.png"
   },
   {
     "id": 10,
@@ -60,7 +220,8 @@
       "Sp. Defense": 20,
       "Speed": 45
     },
-    "image": "http://localhost:3000/assets/pokemons/10.png"
+    "image": "http://localhost:3000/assets/pokemons/10.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/10.png"
   },
   {
     "id": 11,
@@ -81,7 +242,8 @@
       "Sp. Defense": 25,
       "Speed": 30
     },
-    "image": "http://localhost:3000/assets/pokemons/11.png"
+    "image": "http://localhost:3000/assets/pokemons/11.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/11.png"
   },
   {
     "id": 12,
@@ -103,7 +265,8 @@
       "Sp. Defense": 80,
       "Speed": 70
     },
-    "image": "http://localhost:3000/assets/pokemons/12.png"
+    "image": "http://localhost:3000/assets/pokemons/12.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/12.png"
   },
   {
     "id": 13,
@@ -125,7 +288,8 @@
       "Sp. Defense": 20,
       "Speed": 50
     },
-    "image": "http://localhost:3000/assets/pokemons/13.png"
+    "image": "http://localhost:3000/assets/pokemons/13.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/13.png"
   },
   {
     "id": 14,
@@ -147,7 +311,8 @@
       "Sp. Defense": 25,
       "Speed": 35
     },
-    "image": "http://localhost:3000/assets/pokemons/14.png"
+    "image": "http://localhost:3000/assets/pokemons/14.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/14.png"
   },
   {
     "id": 15,
@@ -169,7 +334,8 @@
       "Sp. Defense": 80,
       "Speed": 75
     },
-    "image": "http://localhost:3000/assets/pokemons/15.png"
+    "image": "http://localhost:3000/assets/pokemons/15.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/15.png"
   },
   {
     "id": 16,
@@ -191,7 +357,8 @@
       "Sp. Defense": 35,
       "Speed": 56
     },
-    "image": "http://localhost:3000/assets/pokemons/16.png"
+    "image": "http://localhost:3000/assets/pokemons/16.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/16.png"
   },
   {
     "id": 17,
@@ -213,7 +380,8 @@
       "Sp. Defense": 50,
       "Speed": 71
     },
-    "image": "http://localhost:3000/assets/pokemons/17.png"
+    "image": "http://localhost:3000/assets/pokemons/17.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/17.png"
   },
   {
     "id": 18,
@@ -235,7 +403,8 @@
       "Sp. Defense": 70,
       "Speed": 101
     },
-    "image": "http://localhost:3000/assets/pokemons/18.png"
+    "image": "http://localhost:3000/assets/pokemons/18.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/18.png"
   },
   {
     "id": 19,
@@ -256,7 +425,8 @@
       "Sp. Defense": 35,
       "Speed": 72
     },
-    "image": "http://localhost:3000/assets/pokemons/19.png"
+    "image": "http://localhost:3000/assets/pokemons/19.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/19.png"
   },
   {
     "id": 20,
@@ -277,7 +447,8 @@
       "Sp. Defense": 70,
       "Speed": 97
     },
-    "image": "http://localhost:3000/assets/pokemons/20.png"
+    "image": "http://localhost:3000/assets/pokemons/20.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/20.png"
   },
   {
     "id": 21,
@@ -299,7 +470,8 @@
       "Sp. Defense": 31,
       "Speed": 70
     },
-    "image": "http://localhost:3000/assets/pokemons/21.png"
+    "image": "http://localhost:3000/assets/pokemons/21.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/21.png"
   },
   {
     "id": 22,
@@ -321,7 +493,8 @@
       "Sp. Defense": 61,
       "Speed": 100
     },
-    "image": "http://localhost:3000/assets/pokemons/22.png"
+    "image": "http://localhost:3000/assets/pokemons/22.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/22.png"
   },
   {
     "id": 23,
@@ -342,7 +515,8 @@
       "Sp. Defense": 54,
       "Speed": 55
     },
-    "image": "http://localhost:3000/assets/pokemons/23.png"
+    "image": "http://localhost:3000/assets/pokemons/23.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/23.png"
   },
   {
     "id": 24,
@@ -363,7 +537,8 @@
       "Sp. Defense": 79,
       "Speed": 80
     },
-    "image": "http://localhost:3000/assets/pokemons/24.png"
+    "image": "http://localhost:3000/assets/pokemons/24.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/24.png"
   },
   {
     "id": 25,
@@ -384,7 +559,8 @@
       "Sp. Defense": 50,
       "Speed": 90
     },
-    "image": "http://localhost:3000/assets/pokemons/25.png"
+    "image": "http://localhost:3000/assets/pokemons/25.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/25.png"
   },
   {
     "id": 26,
@@ -405,7 +581,8 @@
       "Sp. Defense": 80,
       "Speed": 110
     },
-    "image": "http://localhost:3000/assets/pokemons/26.png"
+    "image": "http://localhost:3000/assets/pokemons/26.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/26.png"
   },
   {
     "id": 27,
@@ -426,7 +603,8 @@
       "Sp. Defense": 30,
       "Speed": 40
     },
-    "image": "http://localhost:3000/assets/pokemons/27.png"
+    "image": "http://localhost:3000/assets/pokemons/27.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/27.png"
   },
   {
     "id": 28,
@@ -447,7 +625,8 @@
       "Sp. Defense": 55,
       "Speed": 65
     },
-    "image": "http://localhost:3000/assets/pokemons/28.png"
+    "image": "http://localhost:3000/assets/pokemons/28.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/28.png"
   },
   {
     "id": 29,
@@ -468,7 +647,8 @@
       "Sp. Defense": 40,
       "Speed": 41
     },
-    "image": "http://localhost:3000/assets/pokemons/29.png"
+    "image": "http://localhost:3000/assets/pokemons/29.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/29.png"
   },
   {
     "id": 30,
@@ -489,7 +669,8 @@
       "Sp. Defense": 55,
       "Speed": 56
     },
-    "image": "http://localhost:3000/assets/pokemons/30.png"
+    "image": "http://localhost:3000/assets/pokemons/30.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/30.png"
   },
   {
     "id": 31,
@@ -511,7 +692,8 @@
       "Sp. Defense": 85,
       "Speed": 76
     },
-    "image": "http://localhost:3000/assets/pokemons/31.png"
+    "image": "http://localhost:3000/assets/pokemons/31.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/31.png"
   },
   {
     "id": 32,
@@ -532,7 +714,8 @@
       "Sp. Defense": 40,
       "Speed": 50
     },
-    "image": "http://localhost:3000/assets/pokemons/32.png"
+    "image": "http://localhost:3000/assets/pokemons/32.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/32.png"
   },
   {
     "id": 33,
@@ -553,7 +736,8 @@
       "Sp. Defense": 55,
       "Speed": 65
     },
-    "image": "http://localhost:3000/assets/pokemons/33.png"
+    "image": "http://localhost:3000/assets/pokemons/33.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/33.png"
   },
   {
     "id": 34,
@@ -575,7 +759,8 @@
       "Sp. Defense": 75,
       "Speed": 85
     },
-    "image": "http://localhost:3000/assets/pokemons/34.png"
+    "image": "http://localhost:3000/assets/pokemons/34.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/34.png"
   },
   {
     "id": 35,
@@ -596,7 +781,8 @@
       "Sp. Defense": 65,
       "Speed": 35
     },
-    "image": "http://localhost:3000/assets/pokemons/35.png"
+    "image": "http://localhost:3000/assets/pokemons/35.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/35.png"
   },
   {
     "id": 36,
@@ -617,7 +803,8 @@
       "Sp. Defense": 90,
       "Speed": 60
     },
-    "image": "http://localhost:3000/assets/pokemons/36.png"
+    "image": "http://localhost:3000/assets/pokemons/36.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/36.png"
   },
   {
     "id": 37,
@@ -638,7 +825,8 @@
       "Sp. Defense": 65,
       "Speed": 65
     },
-    "image": "http://localhost:3000/assets/pokemons/37.png"
+    "image": "http://localhost:3000/assets/pokemons/37.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/37.png"
   },
   {
     "id": 38,
@@ -659,7 +847,8 @@
       "Sp. Defense": 100,
       "Speed": 100
     },
-    "image": "http://localhost:3000/assets/pokemons/38.png"
+    "image": "http://localhost:3000/assets/pokemons/38.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/38.png"
   },
   {
     "id": 39,
@@ -681,7 +870,8 @@
       "Sp. Defense": 25,
       "Speed": 20
     },
-    "image": "http://localhost:3000/assets/pokemons/39.png"
+    "image": "http://localhost:3000/assets/pokemons/39.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/39.png"
   },
   {
     "id": 40,
@@ -703,7 +893,8 @@
       "Sp. Defense": 50,
       "Speed": 45
     },
-    "image": "http://localhost:3000/assets/pokemons/40.png"
+    "image": "http://localhost:3000/assets/pokemons/40.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/40.png"
   },
   {
     "id": 41,
@@ -725,7 +916,8 @@
       "Sp. Defense": 40,
       "Speed": 55
     },
-    "image": "http://localhost:3000/assets/pokemons/41.png"
+    "image": "http://localhost:3000/assets/pokemons/41.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/41.png"
   },
   {
     "id": 42,
@@ -747,7 +939,8 @@
       "Sp. Defense": 75,
       "Speed": 90
     },
-    "image": "http://localhost:3000/assets/pokemons/42.png"
+    "image": "http://localhost:3000/assets/pokemons/42.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/42.png"
   },
   {
     "id": 43,
@@ -769,7 +962,8 @@
       "Sp. Defense": 65,
       "Speed": 30
     },
-    "image": "http://localhost:3000/assets/pokemons/43.png"
+    "image": "http://localhost:3000/assets/pokemons/43.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/43.png"
   },
   {
     "id": 44,
@@ -791,7 +985,8 @@
       "Sp. Defense": 75,
       "Speed": 40
     },
-    "image": "http://localhost:3000/assets/pokemons/44.png"
+    "image": "http://localhost:3000/assets/pokemons/44.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/44.png"
   },
   {
     "id": 45,
@@ -813,7 +1008,8 @@
       "Sp. Defense": 90,
       "Speed": 50
     },
-    "image": "http://localhost:3000/assets/pokemons/45.png"
+    "image": "http://localhost:3000/assets/pokemons/45.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/45.png"
   },
   {
     "id": 46,
@@ -835,7 +1031,8 @@
       "Sp. Defense": 55,
       "Speed": 25
     },
-    "image": "http://localhost:3000/assets/pokemons/46.png"
+    "image": "http://localhost:3000/assets/pokemons/46.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/46.png"
   },
   {
     "id": 47,
@@ -857,7 +1054,8 @@
       "Sp. Defense": 80,
       "Speed": 30
     },
-    "image": "http://localhost:3000/assets/pokemons/47.png"
+    "image": "http://localhost:3000/assets/pokemons/47.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/47.png"
   },
   {
     "id": 48,
@@ -879,7 +1077,8 @@
       "Sp. Defense": 55,
       "Speed": 45
     },
-    "image": "http://localhost:3000/assets/pokemons/48.png"
+    "image": "http://localhost:3000/assets/pokemons/48.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/48.png"
   },
   {
     "id": 49,
@@ -901,7 +1100,8 @@
       "Sp. Defense": 75,
       "Speed": 90
     },
-    "image": "http://localhost:3000/assets/pokemons/49.png"
+    "image": "http://localhost:3000/assets/pokemons/49.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/49.png"
   },
   {
     "id": 50,
@@ -922,7 +1122,8 @@
       "Sp. Defense": 45,
       "Speed": 95
     },
-    "image": "http://localhost:3000/assets/pokemons/50.png"
+    "image": "http://localhost:3000/assets/pokemons/50.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/50.png"
   },
   {
     "id": 51,
@@ -943,7 +1144,8 @@
       "Sp. Defense": 70,
       "Speed": 120
     },
-    "image": "http://localhost:3000/assets/pokemons/51.png"
+    "image": "http://localhost:3000/assets/pokemons/51.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/51.png"
   },
   {
     "id": 52,
@@ -964,7 +1166,8 @@
       "Sp. Defense": 40,
       "Speed": 90
     },
-    "image": "http://localhost:3000/assets/pokemons/52.png"
+    "image": "http://localhost:3000/assets/pokemons/52.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/52.png"
   },
   {
     "id": 53,
@@ -985,7 +1188,30 @@
       "Sp. Defense": 65,
       "Speed": 115
     },
-    "image": "http://localhost:3000/assets/pokemons/53.png"
+    "image": "http://localhost:3000/assets/pokemons/53.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/53.png"
+  },
+  {
+    "id": 54,
+    "name": {
+      "english": "Psyduck",
+      "japanese": "コダック",
+      "chinese": "可达鸭",
+      "french": "Psykokwak"
+    },
+    "type": [
+      "Water"
+    ],
+    "base": {
+      "HP": 50,
+      "Attack": 52,
+      "Defense": 48,
+      "Sp. Attack": 65,
+      "Sp. Defense": 50,
+      "Speed": 55
+    },
+    "image": "http://localhost:3000/assets/pokemons/54.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/54.png"
   },
   {
     "id": 55,
@@ -1006,7 +1232,8 @@
       "Sp. Defense": 80,
       "Speed": 85
     },
-    "image": "http://localhost:3000/assets/pokemons/55.png"
+    "image": "http://localhost:3000/assets/pokemons/55.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/55.png"
   },
   {
     "id": 56,
@@ -1027,7 +1254,8 @@
       "Sp. Defense": 45,
       "Speed": 70
     },
-    "image": "http://localhost:3000/assets/pokemons/56.png"
+    "image": "http://localhost:3000/assets/pokemons/56.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/56.png"
   },
   {
     "id": 57,
@@ -1048,7 +1276,8 @@
       "Sp. Defense": 70,
       "Speed": 95
     },
-    "image": "http://localhost:3000/assets/pokemons/57.png"
+    "image": "http://localhost:3000/assets/pokemons/57.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/57.png"
   },
   {
     "id": 58,
@@ -1069,7 +1298,8 @@
       "Sp. Defense": 50,
       "Speed": 60
     },
-    "image": "http://localhost:3000/assets/pokemons/58.png"
+    "image": "http://localhost:3000/assets/pokemons/58.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/58.png"
   },
   {
     "id": 59,
@@ -1090,7 +1320,8 @@
       "Sp. Defense": 80,
       "Speed": 95
     },
-    "image": "http://localhost:3000/assets/pokemons/59.png"
+    "image": "http://localhost:3000/assets/pokemons/59.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/59.png"
   },
   {
     "id": 60,
@@ -1111,7 +1342,8 @@
       "Sp. Defense": 40,
       "Speed": 90
     },
-    "image": "http://localhost:3000/assets/pokemons/60.png"
+    "image": "http://localhost:3000/assets/pokemons/60.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/60.png"
   },
   {
     "id": 61,
@@ -1132,7 +1364,8 @@
       "Sp. Defense": 50,
       "Speed": 90
     },
-    "image": "http://localhost:3000/assets/pokemons/61.png"
+    "image": "http://localhost:3000/assets/pokemons/61.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/61.png"
   },
   {
     "id": 62,
@@ -1154,7 +1387,8 @@
       "Sp. Defense": 90,
       "Speed": 70
     },
-    "image": "http://localhost:3000/assets/pokemons/62.png"
+    "image": "http://localhost:3000/assets/pokemons/62.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/62.png"
   },
   {
     "id": 63,
@@ -1175,7 +1409,8 @@
       "Sp. Defense": 55,
       "Speed": 90
     },
-    "image": "http://localhost:3000/assets/pokemons/63.png"
+    "image": "http://localhost:3000/assets/pokemons/63.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/63.png"
   },
   {
     "id": 64,
@@ -1196,7 +1431,8 @@
       "Sp. Defense": 70,
       "Speed": 105
     },
-    "image": "http://localhost:3000/assets/pokemons/64.png"
+    "image": "http://localhost:3000/assets/pokemons/64.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/64.png"
   },
   {
     "id": 65,
@@ -1217,7 +1453,8 @@
       "Sp. Defense": 95,
       "Speed": 120
     },
-    "image": "http://localhost:3000/assets/pokemons/65.png"
+    "image": "http://localhost:3000/assets/pokemons/65.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/65.png"
   },
   {
     "id": 66,
@@ -1238,7 +1475,8 @@
       "Sp. Defense": 35,
       "Speed": 35
     },
-    "image": "http://localhost:3000/assets/pokemons/66.png"
+    "image": "http://localhost:3000/assets/pokemons/66.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/66.png"
   },
   {
     "id": 67,
@@ -1259,7 +1497,8 @@
       "Sp. Defense": 60,
       "Speed": 45
     },
-    "image": "http://localhost:3000/assets/pokemons/67.png"
+    "image": "http://localhost:3000/assets/pokemons/67.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/67.png"
   },
   {
     "id": 68,
@@ -1280,7 +1519,8 @@
       "Sp. Defense": 85,
       "Speed": 55
     },
-    "image": "http://localhost:3000/assets/pokemons/68.png"
+    "image": "http://localhost:3000/assets/pokemons/68.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/68.png"
   },
   {
     "id": 69,
@@ -1302,7 +1542,8 @@
       "Sp. Defense": 30,
       "Speed": 40
     },
-    "image": "http://localhost:3000/assets/pokemons/69.png"
+    "image": "http://localhost:3000/assets/pokemons/69.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/69.png"
   },
   {
     "id": 70,
@@ -1324,7 +1565,8 @@
       "Sp. Defense": 45,
       "Speed": 55
     },
-    "image": "http://localhost:3000/assets/pokemons/70.png"
+    "image": "http://localhost:3000/assets/pokemons/70.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/70.png"
   },
   {
     "id": 71,
@@ -1346,7 +1588,8 @@
       "Sp. Defense": 70,
       "Speed": 70
     },
-    "image": "http://localhost:3000/assets/pokemons/71.png"
+    "image": "http://localhost:3000/assets/pokemons/71.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/71.png"
   },
   {
     "id": 72,
@@ -1368,7 +1611,8 @@
       "Sp. Defense": 100,
       "Speed": 70
     },
-    "image": "http://localhost:3000/assets/pokemons/72.png"
+    "image": "http://localhost:3000/assets/pokemons/72.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/72.png"
   },
   {
     "id": 73,
@@ -1390,7 +1634,8 @@
       "Sp. Defense": 120,
       "Speed": 100
     },
-    "image": "http://localhost:3000/assets/pokemons/73.png"
+    "image": "http://localhost:3000/assets/pokemons/73.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/73.png"
   },
   {
     "id": 74,
@@ -1412,7 +1657,8 @@
       "Sp. Defense": 30,
       "Speed": 20
     },
-    "image": "http://localhost:3000/assets/pokemons/74.png"
+    "image": "http://localhost:3000/assets/pokemons/74.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/74.png"
   },
   {
     "id": 75,
@@ -1434,7 +1680,8 @@
       "Sp. Defense": 45,
       "Speed": 35
     },
-    "image": "http://localhost:3000/assets/pokemons/75.png"
+    "image": "http://localhost:3000/assets/pokemons/75.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/75.png"
   },
   {
     "id": 76,
@@ -1456,7 +1703,8 @@
       "Sp. Defense": 65,
       "Speed": 45
     },
-    "image": "http://localhost:3000/assets/pokemons/76.png"
+    "image": "http://localhost:3000/assets/pokemons/76.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/76.png"
   },
   {
     "id": 77,
@@ -1477,7 +1725,8 @@
       "Sp. Defense": 65,
       "Speed": 90
     },
-    "image": "http://localhost:3000/assets/pokemons/77.png"
+    "image": "http://localhost:3000/assets/pokemons/77.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/77.png"
   },
   {
     "id": 78,
@@ -1994,7 +2243,8 @@
       "Sp. Defense": 80,
       "Speed": 150
     },
-    "image": "http://localhost:3000/assets/pokemons/101.png"
+    "image": "http://localhost:3000/assets/pokemons/101.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/101.png"
   },
   {
     "id": 102,
@@ -2016,7 +2266,8 @@
       "Sp. Defense": 45,
       "Speed": 40
     },
-    "image": "http://localhost:3000/assets/pokemons/102.png"
+    "image": "http://localhost:3000/assets/pokemons/102.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/102.png"
   },
   {
     "id": 103,
@@ -2038,7 +2289,8 @@
       "Sp. Defense": 75,
       "Speed": 55
     },
-    "image": "http://localhost:3000/assets/pokemons/103.png"
+    "image": "http://localhost:3000/assets/pokemons/103.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/103.png"
   },
   {
     "id": 104,
@@ -2059,7 +2311,8 @@
       "Sp. Defense": 50,
       "Speed": 35
     },
-    "image": "http://localhost:3000/assets/pokemons/104.png"
+    "image": "http://localhost:3000/assets/pokemons/104.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/104.png"
   },
   {
     "id": 105,
@@ -2080,7 +2333,8 @@
       "Sp. Defense": 80,
       "Speed": 45
     },
-    "image": "http://localhost:3000/assets/pokemons/105.png"
+    "image": "http://localhost:3000/assets/pokemons/105.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/105.png"
   },
   {
     "id": 106,
@@ -2101,7 +2355,8 @@
       "Sp. Defense": 110,
       "Speed": 87
     },
-    "image": "http://localhost:3000/assets/pokemons/106.png"
+    "image": "http://localhost:3000/assets/pokemons/106.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/106.png"
   },
   {
     "id": 107,
@@ -2122,7 +2377,8 @@
       "Sp. Defense": 110,
       "Speed": 76
     },
-    "image": "http://localhost:3000/assets/pokemons/107.png"
+    "image": "http://localhost:3000/assets/pokemons/107.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/107.png"
   },
   {
     "id": 108,
@@ -2143,7 +2399,8 @@
       "Sp. Defense": 75,
       "Speed": 30
     },
-    "image": "http://localhost:3000/assets/pokemons/108.png"
+    "image": "http://localhost:3000/assets/pokemons/108.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/108.png"
   },
   {
     "id": 109,
@@ -2164,7 +2421,8 @@
       "Sp. Defense": 45,
       "Speed": 35
     },
-    "image": "http://localhost:3000/assets/pokemons/109.png"
+    "image": "http://localhost:3000/assets/pokemons/109.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/109.png"
   },
   {
     "id": 110,
@@ -2185,7 +2443,8 @@
       "Sp. Defense": 70,
       "Speed": 60
     },
-    "image": "http://localhost:3000/assets/pokemons/110.png"
+    "image": "http://localhost:3000/assets/pokemons/110.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/110.png"
   },
   {
     "id": 111,
@@ -2207,7 +2466,8 @@
       "Sp. Defense": 30,
       "Speed": 25
     },
-    "image": "http://localhost:3000/assets/pokemons/111.png"
+    "image": "http://localhost:3000/assets/pokemons/111.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/111.png"
   },
   {
     "id": 112,
@@ -2229,7 +2489,8 @@
       "Sp. Defense": 45,
       "Speed": 40
     },
-    "image": "http://localhost:3000/assets/pokemons/112.png"
+    "image": "http://localhost:3000/assets/pokemons/112.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/112.png"
   },
   {
     "id": 113,
@@ -2250,7 +2511,8 @@
       "Sp. Defense": 105,
       "Speed": 50
     },
-    "image": "http://localhost:3000/assets/pokemons/113.png"
+    "image": "http://localhost:3000/assets/pokemons/113.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/113.png"
   },
   {
     "id": 114,
@@ -2271,7 +2533,8 @@
       "Sp. Defense": 40,
       "Speed": 60
     },
-    "image": "http://localhost:3000/assets/pokemons/114.png"
+    "image": "http://localhost:3000/assets/pokemons/114.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/114.png"
   },
   {
     "id": 115,
@@ -2292,7 +2555,8 @@
       "Sp. Defense": 80,
       "Speed": 90
     },
-    "image": "http://localhost:3000/assets/pokemons/115.png"
+    "image": "http://localhost:3000/assets/pokemons/115.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/115.png"
   },
   {
     "id": 116,
@@ -2313,7 +2577,8 @@
       "Sp. Defense": 25,
       "Speed": 60
     },
-    "image": "http://localhost:3000/assets/pokemons/116.png"
+    "image": "http://localhost:3000/assets/pokemons/116.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/116.png"
   },
   {
     "id": 117,
@@ -2334,7 +2599,8 @@
       "Sp. Defense": 45,
       "Speed": 85
     },
-    "image": "http://localhost:3000/assets/pokemons/117.png"
+    "image": "http://localhost:3000/assets/pokemons/117.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/117.png"
   },
   {
     "id": 118,
@@ -2355,7 +2621,8 @@
       "Sp. Defense": 50,
       "Speed": 63
     },
-    "image": "http://localhost:3000/assets/pokemons/118.png"
+    "image": "http://localhost:3000/assets/pokemons/118.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/118.png"
   },
   {
     "id": 119,
@@ -2376,7 +2643,8 @@
       "Sp. Defense": 80,
       "Speed": 68
     },
-    "image": "http://localhost:3000/assets/pokemons/119.png"
+    "image": "http://localhost:3000/assets/pokemons/119.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/119.png"
   },
   {
     "id": 120,
@@ -2397,7 +2665,8 @@
       "Sp. Defense": 55,
       "Speed": 85
     },
-    "image": "http://localhost:3000/assets/pokemons/120.png"
+    "image": "http://localhost:3000/assets/pokemons/120.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/120.png"
   },
   {
     "id": 121,
@@ -2419,7 +2688,8 @@
       "Sp. Defense": 85,
       "Speed": 115
     },
-    "image": "http://localhost:3000/assets/pokemons/121.png"
+    "image": "http://localhost:3000/assets/pokemons/121.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/121.png"
   },
   {
     "id": 122,
@@ -2441,7 +2711,8 @@
       "Sp. Defense": 120,
       "Speed": 90
     },
-    "image": "http://localhost:3000/assets/pokemons/122.png"
+    "image": "http://localhost:3000/assets/pokemons/122.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/122.png"
   },
   {
     "id": 123,
@@ -2463,7 +2734,8 @@
       "Sp. Defense": 80,
       "Speed": 105
     },
-    "image": "http://localhost:3000/assets/pokemons/123.png"
+    "image": "http://localhost:3000/assets/pokemons/123.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/123.png"
   },
   {
     "id": 124,
@@ -2485,7 +2757,8 @@
       "Sp. Defense": 95,
       "Speed": 95
     },
-    "image": "http://localhost:3000/assets/pokemons/124.png"
+    "image": "http://localhost:3000/assets/pokemons/124.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/124.png"
   },
   {
     "id": 125,
@@ -2506,7 +2779,8 @@
       "Sp. Defense": 85,
       "Speed": 105
     },
-    "image": "http://localhost:3000/assets/pokemons/125.png"
+    "image": "http://localhost:3000/assets/pokemons/125.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/125.png"
   },
   {
     "id": 126,
@@ -2527,7 +2801,8 @@
       "Sp. Defense": 85,
       "Speed": 93
     },
-    "image": "http://localhost:3000/assets/pokemons/126.png"
+    "image": "http://localhost:3000/assets/pokemons/126.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/126.png"
   },
   {
     "id": 127,
@@ -2548,7 +2823,8 @@
       "Sp. Defense": 70,
       "Speed": 85
     },
-    "image": "http://localhost:3000/assets/pokemons/127.png"
+    "image": "http://localhost:3000/assets/pokemons/127.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/127.png"
   },
   {
     "id": 128,
@@ -2569,7 +2845,8 @@
       "Sp. Defense": 70,
       "Speed": 110
     },
-    "image": "http://localhost:3000/assets/pokemons/128.png"
+    "image": "http://localhost:3000/assets/pokemons/128.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/128.png"
   },
   {
     "id": 129,
@@ -2590,7 +2867,8 @@
       "Sp. Defense": 20,
       "Speed": 80
     },
-    "image": "http://localhost:3000/assets/pokemons/129.png"
+    "image": "http://localhost:3000/assets/pokemons/129.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/129.png"
   },
   {
     "id": 130,
@@ -2612,7 +2890,8 @@
       "Sp. Defense": 100,
       "Speed": 81
     },
-    "image": "http://localhost:3000/assets/pokemons/130.png"
+    "image": "http://localhost:3000/assets/pokemons/130.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/130.png"
   },
   {
     "id": 131,
@@ -2634,7 +2913,8 @@
       "Sp. Defense": 95,
       "Speed": 60
     },
-    "image": "http://localhost:3000/assets/pokemons/131.png"
+    "image": "http://localhost:3000/assets/pokemons/131.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/131.png"
   },
   {
     "id": 132,
@@ -2655,7 +2935,8 @@
       "Sp. Defense": 48,
       "Speed": 48
     },
-    "image": "http://localhost:3000/assets/pokemons/132.png"
+    "image": "http://localhost:3000/assets/pokemons/132.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/132.png"
   },
   {
     "id": 133,
@@ -2676,7 +2957,8 @@
       "Sp. Defense": 65,
       "Speed": 55
     },
-    "image": "http://localhost:3000/assets/pokemons/133.png"
+    "image": "http://localhost:3000/assets/pokemons/133.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/133.png"
   },
   {
     "id": 134,
@@ -2697,7 +2979,8 @@
       "Sp. Defense": 95,
       "Speed": 65
     },
-    "image": "http://localhost:3000/assets/pokemons/134.png"
+    "image": "http://localhost:3000/assets/pokemons/134.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/134.png"
   },
   {
     "id": 135,
@@ -2718,7 +3001,8 @@
       "Sp. Defense": 95,
       "Speed": 130
     },
-    "image": "http://localhost:3000/assets/pokemons/135.png"
+    "image": "http://localhost:3000/assets/pokemons/135.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/135.png"
   },
   {
     "id": 136,
@@ -2739,7 +3023,8 @@
       "Sp. Defense": 110,
       "Speed": 65
     },
-    "image": "http://localhost:3000/assets/pokemons/136.png"
+    "image": "http://localhost:3000/assets/pokemons/136.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/136.png"
   },
   {
     "id": 137,
@@ -3043,5 +3328,27 @@
       "Speed": 130
     },
     "image": "http://localhost:3000/assets/pokemons/150.png"
+  },
+  {
+    "id": 151,
+    "name": {
+      "english": "Mew",
+      "japanese": "ミュウ",
+      "chinese": "梦幻",
+      "french": "Mew"
+    },
+    "type": [
+      "Psychic"
+    ],
+    "base": {
+      "HP": 100,
+      "Attack": 100,
+      "Defense": 100,
+      "Sp. Attack": 100,
+      "Sp. Defense": 100,
+      "Speed": 100
+    },
+    "image": "http://localhost:3000/assets/pokemons/151.png",
+    "imageShiny": "http://localhost:3000/assets/pokemons/shiny/151.png"
   }
 ]
