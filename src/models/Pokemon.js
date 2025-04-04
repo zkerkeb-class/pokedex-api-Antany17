@@ -1,3 +1,4 @@
+
 import mongoose from 'mongoose';
 
 const pokemonSchema = new mongoose.Schema({
@@ -7,15 +8,17 @@ const pokemonSchema = new mongoose.Schema({
     unique: true
   },
   name: {
-    type: String,
-    required: true
+    french: String,
+    english: String,
+    japanese: String,
+    chinese: String
   },
   types: [{
     type: String,
     enum: [
-      "fire", "water", "grass", "electric", "ice", "fighting",
-      "poison", "ground", "flying", "psychic", "bug", "rock",
-      "ghost", "dragon", "dark", "steel", "fairy"
+      "Fire", "Water", "Grass", "Electric", "Ice", "Fighting",
+      "Poison", "Ground", "Flying", "Psychic", "Bug", "Rock",
+      "Ghost", "Dragon", "Dark", "Steel", "Fairy"
     ]
   }],
   image: {
