@@ -23,7 +23,7 @@ const pokemonsList = [
             "Sp. Defense": 65,
             "Speed": 45
         },
-        "image": `${process.env.API_URL}/assets/pokemons/1.png`     
+        "image": `${process.env.API_URL}/assets/pokemons/1.png`,
     },
     {
         "id": 2,
