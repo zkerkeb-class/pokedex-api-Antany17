@@ -7,10 +7,20 @@ import dotenv from "dotenv";
 import saveJson from "./utils/saveJson.js";
 import connectDB from "./config/connectdb.js";
 import Pokemon from "./models/pokemon.js";
+import jwt from 'jsonwebtoken';
 
 dotenv.config(); //recupérer les variables d'environnement
 
 connectDB();
+
+const users = [
+  {
+    id: 1,
+    username: 'admin',
+    password: 'password123', // "password123"
+    role: 'admin'
+  }
+];
 
 // Lire le fichier JSON
 const __filename = fileURLToPath(import.meta.url);
@@ -141,4 +151,104 @@ app.get("/", (req, res) => {
 // Démarrage du serveur
 app.listen(PORT, () => {
   console.log(`Serveur démarré sur http://localhost:${PORT}`);
+});
+
+
+// Route d'inscription
+app.post('/api/register', async (req, res) => {
+  const { username, password } = req.body;
+
+  // Vérification si l'utilisateur existe déjà
+  if (users.find(user => user.username === username)) {
+    return res.status(400).json({ message: 'Cet utilisateur existe déjà' });
+  }
+
+  // Hashage du mot de passe
+  const salt = await bcrypt.genSalt(10);
+  const hashedPassword = await bcrypt.hash(password, salt);
+
+  // Création d'un nouvel utilisateur
+  const newUser = {
+    id: users.length + 1,
+    username,
+    password: hashedPassword,
+    role: 'user'
+  };
+
+  users.push(newUser);
+
+  res.status(201).json({ message: 'Utilisateur créé avec succès' });
+});
+
+// Route de connexion
+app.post('/api/login', async (req, res) => {
+  const { username, password } = req.body;
+
+  // Recherche de l'utilisateur
+  const user = users.find(user => user.username === username);
+  if (!user || password !== user.password) {
+      return res.status(400).json({ message: 'Identifiants invalides' });
+  }
+
+
+  // Création du payload JWT
+  const payload = {
+    user: {
+      id: user.id,
+      username: user.username,
+      role: user.role
+    }
+  };
+
+  // Génération du token
+  jwt.sign(
+    payload,
+    process.env.JWT_SECRET,
+    { expiresIn: '1h' },
+    (err, token) => {
+      if (err) throw err;
+      res.json({ token });
+    }
+  );
+});
+
+
+const auth = (req, res, next) => {
+  // Récupération du token depuis l'en-tête
+  const token = req.headers['authorization']?.split(' ')[1];
+  // Vérification de la présence du token
+  if (!token) {
+    return res.status(401).json({ message: 'Accès refusé, token manquant' });
+  }
+
+  try {
+    // Vérification du token
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+
+    // Ajout des informations utilisateur à l'objet requête
+    req.user = decoded.user;
+    next();
+  } catch (err) {
+    res.status(401).json({ message: 'Token invalide' });
+  }
+};
+
+// Route protégée - accessible uniquement avec un token valide
+app.get('/api/profile', auth, (req, res) => {
+  res.json({
+    message: 'Profil récupéré avec succès',
+    user: req.user
+  });
+});
+
+// Route protégée avec vérification de rôle
+app.get('/api/admin', auth, (req, res) => {
+  if (req.user.role !== 'admin') {
+    return res.status(403).json({ message: 'Accès refusé: droits d\'administrateur requis' });
+  }
+
+  res.json({
+    message: 'Zone administrative',
+    user: req.user
+  });
 });
