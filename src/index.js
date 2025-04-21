@@ -18,7 +18,9 @@ const users = [
     id: 1,
     username: 'admin',
     password: 'password123', // "password123"
-    role: 'admin'
+    role: 'admin',
+    favorites: [] // Tableau pour stocker les IDs des Pokémon favoris
+
   }
 ];
 
@@ -49,7 +51,6 @@ app.use("/assets", express.static(path.join(__dirname, "../assets")));
 app.get("/api/pokemons", async (req, res) => {
   const pokemons = await Pokemon.find({});
   console.log("🚀 ~ app.get ~pokemons:", pokemons);
-
   res.status(200).send({
     pokemons: pokemons,
   });
@@ -186,6 +187,7 @@ app.post('/api/login', async (req, res) => {
 
   // Recherche de l'utilisateur
   const user = users.find(user => user.username === username);
+
   if (!user || password !== user.password) {
       return res.status(400).json({ message: 'Identifiants invalides' });
   }
@@ -252,3 +254,47 @@ app.get('/api/admin', auth, (req, res) => {
     user: req.user
   });
 });
+
+
+// Route pour ajouter un Pokémon aux favoris
+app.post('/api/favorites', auth, (req, res) => {
+  const { pokemonId } = req.body;
+  const userId = req.user.id;
+
+  const user = users.find(u => u.id === userId);
+  if (!user) {
+    return res.status(404).json({ message: 'Utilisateur non trouvé' });
+  }
+
+  if (!user.favorites.includes(pokemonId)) {
+    user.favorites.push(pokemonId);
+  }
+
+  res.json({ message: 'Pokémon ajouté aux favoris', favorites: user.favorites });
+});
+
+// Route pour supprimer un Pokémon des favoris
+app.delete('/api/favorites/:pokemonId', auth, (req, res) => {
+  const { pokemonId } = req.params;
+  const userId = req.user.id;
+
+  const user = users.find(u => u.id === userId);
+  if (!user) {
+    return res.status(404).json({ message: 'Utilisateur non trouvé' });
+  }
+
+  user.favorites = user.favorites.filter(id => id !== parseInt(pokemonId));
+  res.json({ message: 'Pokémon retiré des favoris', favorites: user.favorites });
+});
+
+// Route pour obtenir les Pokémon favoris
+app.get('/api/favorites', auth, (req, res) => {
+  const userId = req.user.id;
+  const user = users.find(u => u.id === userId);
+  
+  if (!user) {
+    return res.status(404).json({ message: 'Utilisateur non trouvé' });
+  }
+
+  res.json({ favorites: user.favorites });
+}); 
