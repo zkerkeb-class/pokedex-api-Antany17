@@ -291,21 +291,28 @@ app.delete('/api/favorites/:pokemonId', auth, (req, res) => {
     return res.status(404).json({ message: 'Utilisateur non trouvé' });
   }
 
-  user.favorites = user.favorites.filter(id => id !== parseInt(pokemonId));
+  // Supprimer le parseInt car les IDs sont des chaînes
+  user.favorites = user.favorites.filter(id => id !== pokemonId);
   res.json({ message: 'Pokémon retiré des favoris', favorites: user.favorites });
 });
 
 // Route pour obtenir les Pokémon favoris
-app.get('/api/favorites', auth, (req, res) => {
-  const userId = req.user.id;
-  const user = users.find(u => u.id === userId);
-  
-  if (!user) {
-    return res.status(404).json({ message: 'Utilisateur non trouvé' });
-  }
+app.get('/api/favorites', auth, async (req, res) => {
+  try {
+    const userId = req.user.id;
+    const user = users.find(u => u.id === userId);
+    
+    if (!user) {
+      return res.status(404).json({ message: 'Utilisateur non trouvé' });
+    }
 
-  res.json({ favorites: user.favorites });
-}); 
+    // Récupérer les détails des Pokémon favoris
+    const favoritePokemons = await Pokemon.find({ _id: { $in: user.favorites } });
+    res.json({ favorites: favoritePokemons });
+  } catch (error) {
+    res.status(400).json({ message: 'Erreur lors de la récupération des favoris', error: error.message });
+  }
+});
 
 // Route de déconnexion
 app.post('/api/logout', auth, (req, res) => {
