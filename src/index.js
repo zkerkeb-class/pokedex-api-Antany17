@@ -21,6 +21,14 @@ const users = [
     role: 'admin',
     favorites: [] // Tableau pour stocker les IDs des Pokémon favoris
 
+  },
+  {
+    id: 2,
+    username: 'admin2',
+    password: 'password123', // "password123"
+    role: 'admin',
+    favorites: [] // Tableau pour stocker les IDs des Pokémon favoris
+
   }
 ];
 
@@ -298,3 +306,10 @@ app.get('/api/favorites', auth, (req, res) => {
 
   res.json({ favorites: user.favorites });
 }); 
+
+// Route de déconnexion
+app.post('/api/logout', auth, (req, res) => {
+  // Cette route est plus pour la cohérence de l'API
+  // La déconnexion se fait côté client en supprimant le token
+  res.json({ message: 'Déconnexion réussie' });
+});
