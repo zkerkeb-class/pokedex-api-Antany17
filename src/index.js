@@ -172,15 +172,13 @@ app.post('/api/register', async (req, res) => {
     return res.status(400).json({ message: 'Cet utilisateur existe déjà' });
   }
 
-  // Hashage du mot de passe
-  const salt = await bcrypt.genSalt(10);
-  const hashedPassword = await bcrypt.hash(password, salt);
+
 
   // Création d'un nouvel utilisateur
   const newUser = {
     id: users.length + 1,
     username,
-    password: hashedPassword,
+    password: password,
     role: 'user'
   };
 
