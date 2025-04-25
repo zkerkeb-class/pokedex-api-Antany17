@@ -8,29 +8,46 @@ import saveJson from "./utils/saveJson.js";
 import connectDB from "./config/connectdb.js";
 import Pokemon from "./models/pokemon.js";
 import jwt from 'jsonwebtoken';
+import bcrypt from 'bcrypt';
 
 dotenv.config(); //recupérer les variables d'environnement
 
 connectDB();
 
+// Nombre de rounds pour le salage bcrypt
+const saltRounds = 10;
+
 const users = [
   {
     id: 1,
     username: 'admin',
-    password: 'password123', // "password123"
+    password: 'password123', // Sera haché au démarrage du serveur
     role: 'admin',
     favorites: [] // Tableau pour stocker les IDs des Pokémon favoris
-
   },
   {
     id: 2,
     username: 'admin2',
-    password: 'password123', // "password123"
+    password: 'password123', // Sera haché au démarrage du serveur
     role: 'admin',
     favorites: [] // Tableau pour stocker les IDs des Pokémon favoris
-
   }
 ];
+
+// Fonction pour hacher les mots de passe des utilisateurs existants
+async function hashExistingPasswords() {
+  for (let i = 0; i < users.length; i++) {
+    const user = users[i];
+    if (!user.password.startsWith('$2b$')) { // Vérifie si le mot de passe n'est pas déjà haché
+      try {
+        users[i].password = await bcrypt.hash(user.password, saltRounds);
+      } catch (error) {
+        console.error(`Erreur lors du hashage du mot de passe pour l'utilisateur ${user.username}:`, error);
+      }
+    }
+  }
+  console.log('Mots de passe des utilisateurs existants mis à jour');
+}
 
 // Lire le fichier JSON
 const __filename = fileURLToPath(import.meta.url);
@@ -49,11 +66,10 @@ app.use(cors());
 app.use(express.json());
 
 // Middleware pour servir des fichiers statiques
-// 'app.use' est utilisé pour ajouter un middleware à notre application Express
-// '/assets' est le chemin virtuel où les fichiers seront accessibles
-// 'express.static' est un middleware qui sert des fichiers statiques
-// 'path.join(__dirname, '../assets')' construit le chemin absolu vers le dossier 'assets'
 app.use("/assets", express.static(path.join(__dirname, "../assets")));
+
+// Hacher les mots de passe existants au démarrage
+hashExistingPasswords();
 
 // Route GET de base
 app.get("/api/pokemons", async (req, res) => {
@@ -130,9 +146,7 @@ app.put("/api/pokemons/:id", async (req, res) => {
   try {
     // verifie la structure grace a la validation mongoose
     const { error } = await Pokemon.validate(req.body);
-    console.log("🚀 ~ app.put ~ error:", error)
-
-  
+    console.log("🚀 ~ app.put ~ error:", error);
     
     const pokemon = await Pokemon.findByIdAndUpdate(req.params.id, req.body, {
       new: true,
@@ -145,7 +159,7 @@ app.put("/api/pokemons/:id", async (req, res) => {
       pokemon,
     });
   } catch (error) {
-    console.log("🚀 ~ app.put ~ error:", error)
+    console.log("🚀 ~ app.put ~ error:", error);
     return res.status(400).send({
       type: "error",
       message: error.message,
@@ -157,12 +171,6 @@ app.get("/", (req, res) => {
   res.send("bienvenue sur l'API Pokémon");
 });
 
-// Démarrage du serveur
-app.listen(PORT, () => {
-  console.log(`Serveur démarré sur http://localhost:${PORT}`);
-});
-
-
 // Route d'inscription
 app.post('/api/register', async (req, res) => {
   const { username, password } = req.body;
@@ -172,19 +180,24 @@ app.post('/api/register', async (req, res) => {
     return res.status(400).json({ message: 'Cet utilisateur existe déjà' });
   }
 
+  try {
+    // Hashage du mot de passe
+    const hashedPassword = await bcrypt.hash(password, saltRounds);
 
+    // Création d'un nouvel utilisateur avec le mot de passe hashé
+    const newUser = {
+      id: users.length + 1,
+      username,
+      password: hashedPassword,
+      role: 'user',
+      favorites: []
+    };
 
-  // Création d'un nouvel utilisateur
-  const newUser = {
-    id: users.length + 1,
-    username,
-    password: password,
-    role: 'user'
-  };
-
-  users.push(newUser);
-
-  res.status(201).json({ message: 'Utilisateur créé avec succès' });
+    users.push(newUser);
+    res.status(201).json({ message: 'Utilisateur créé avec succès' });
+  } catch (error) {
+    res.status(500).json({ message: 'Erreur lors de la création de l\'utilisateur', error: error.message });
+  }
 });
 
 // Route de connexion
@@ -194,30 +207,40 @@ app.post('/api/login', async (req, res) => {
   // Recherche de l'utilisateur
   const user = users.find(user => user.username === username);
 
-  if (!user || password !== user.password) {
-      return res.status(400).json({ message: 'Identifiants invalides' });
+  if (!user) {
+    return res.status(400).json({ message: 'Identifiants invalides' });
   }
 
+  try {
+    // Comparaison du mot de passe fourni avec le hash stocké
+    const isMatch = await bcrypt.compare(password, user.password);
 
-  // Création du payload JWT
-  const payload = {
-    user: {
-      id: user.id,
-      username: user.username,
-      role: user.role
+    if (!isMatch) {
+      return res.status(400).json({ message: 'Identifiants invalides' });
     }
-  };
 
-  // Génération du token
-  jwt.sign(
-    payload,
-    process.env.JWT_SECRET,
-    { expiresIn: '1h' },
-    (err, token) => {
-      if (err) throw err;
-      res.json({ token });
-    }
-  );
+    // Création du payload JWT
+    const payload = {
+      user: {
+        id: user.id,
+        username: user.username,
+        role: user.role
+      }
+    };
+
+    // Génération du token
+    jwt.sign(
+      payload,
+      process.env.JWT_SECRET,
+      { expiresIn: '1h' },
+      (err, token) => {
+        if (err) throw err;
+        res.json({ token });
+      }
+    );
+  } catch (error) {
+    res.status(500).json({ message: 'Erreur lors de la connexion', error: error.message });
+  }
 });
 
 
@@ -289,7 +312,6 @@ app.delete('/api/favorites/:pokemonId', auth, (req, res) => {
     return res.status(404).json({ message: 'Utilisateur non trouvé' });
   }
 
-  // Supprimer le parseInt car les IDs sont des chaînes
   user.favorites = user.favorites.filter(id => id !== pokemonId);
   res.json({ message: 'Pokémon retiré des favoris', favorites: user.favorites });
 });
@@ -317,4 +339,9 @@ app.post('/api/logout', auth, (req, res) => {
   // Cette route est plus pour la cohérence de l'API
   // La déconnexion se fait côté client en supprimant le token
   res.json({ message: 'Déconnexion réussie' });
+});
+
+// Démarrage du serveur
+app.listen(PORT, () => {
+  console.log(`Serveur démarré sur http://localhost:${PORT}`);
 });
