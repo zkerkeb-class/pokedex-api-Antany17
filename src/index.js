@@ -184,7 +184,7 @@ app.post('/api/register', async (req, res) => {
     // Hashage du mot de passe
     const hashedPassword = await bcrypt.hash(password, saltRounds);
 
-    // Création d'un nouvel utilisateur avec le mot de passe hashé
+    // Création d'un nouvel utilisateur avec le nouveau mot de passe hashé
     const newUser = {
       id: users.length + 1,
       username,
